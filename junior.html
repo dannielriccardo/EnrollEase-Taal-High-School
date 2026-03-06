@@ -105,43 +105,100 @@ input, select {
 .enroll-btn:hover {
   background:#333;
 }
+/* ============================= */
+/* TABLET RESPONSIVE (768px - 1024px) */
+/* ============================= */
+@media screen and (max-width:1024px){
+
+  .form{
+    max-width:95%;
+    padding:18px;
+  }
+
+  .row{
+    gap:8px;
+  }
+
+  .address-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .address-grid .wide{
+    grid-column:span 2;
+  }
+
+  input,select{
+    height:34px;
+    font-size:14px;
+  }
+
+  label{
+    font-size:13px;
+  }
+
+  .enroll-btn{
+    padding:12px 60px;
+    font-size:15px;
+  }
+
+}
 
 
+/* ============================= */
+/* MOBILE RESPONSIVE (Phones) */
+/* ============================= */
+@media screen and (max-width:768px){
 
+  body{
+    padding:10px;
+  }
 
-@media only screen and (max-width: 480px) {
-  body {
-    padding: 10px;
-    background-size: cover;
+  .form{
+    max-width:100%;
+    padding:15px;
+    border-width:1px;
   }
-  .form {
-    padding: 10px;
-    border-width: 1px;
+
+  .row{
+    flex-direction:column;
+    gap:10px;
   }
-  .field {
-    font-size: 12px;
-    width: 100%;
+
+  .address-grid{
+    grid-template-columns:1fr;
   }
-  input, select {
-    height: 35px;
-    padding: 5px;
-    font-size: 14px;
+
+  .address-grid .wide{
+    grid-column:span 1;
   }
-  .address-grid {
-    grid-template-columns: 1fr;
+
+  input,select{
+    height:38px;
+    font-size:14px;
   }
-  .address-grid .wide {
-    grid-column: span 1;
+
+  textarea{
+    font-size:14px;
   }
-  .enroll-btn {
-    padding: 12px;
-    width: 100%;
-    font-size: 16px;
+
+  label{
+    font-size:13px;
   }
-  h3 {
-    font-size: 16px;
-    padding: 8px;
+
+  h3{
+    font-size:14px;
   }
+
+  .section-box{
+    padding:8px;
+  }
+
+  .enroll-btn{
+    width:100%;
+    padding:14px;
+    font-size:16px;
+  }
+
 }
 
 input.input-error,
@@ -794,4 +851,5 @@ async function goToSuccess() {
 
 
 </body>
+
 </html>
