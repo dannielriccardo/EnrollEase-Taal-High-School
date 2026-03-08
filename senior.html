@@ -670,7 +670,7 @@ async function goToSuccess() {
       }
     }
 
-    // COPY ADDRESS IF SAME
+
     if (fields.sameAddress.value === "Yes") {
       fields.permHouse.value = fields.currentHouse.value;
       fields.permStreet.value = fields.currentStreet.value;
@@ -680,9 +680,7 @@ async function goToSuccess() {
       fields.permZip.value = fields.currentZip.value;
     }
 
-    // =============================
-    // REQUIRED FIELDS
-    // =============================
+
     const requiredFields = [
       { field: fields.schoolYear, name: "School Year" },
       { field: fields.gradeLevel, name: "Grade Level" },
@@ -785,22 +783,22 @@ async function goToSuccess() {
     );
     const allStudents = await countRes.json();
 
-    if (allStudents) {
-      const duplicate = Object.values(allStudents).some(student =>
-        student["2-Personal-Information"]["1-PSA"] === fields.psa.value ||
-        (fields.withlrn.value === "Yes" && student["2-Personal-Information"]["2-LRN"] === fields.lrn.value)
-      );
-      if (duplicate) {
-        alert("A student with the same PSA or LRN already exists!");
-        return;
-      }
-    }
+if (allStudents) {
+  const duplicate = Object.values(allStudents).some(student =>
+    student["2-Personal-Information"]["3-Last-Name"].toLowerCase() === fields.lastName.value.toLowerCase() &&
+    student["2-Personal-Information"]["4-First-Name"].toLowerCase() === fields.firstName.value.toLowerCase()
+  );
 
-    // Generate Student ID
+  if (duplicate) {
+    alert("A student with the same First Name and Last Name already exists!");
+    return;
+  }
+}
+
     const studentID = 'STU-' + Math.floor(Math.random() * 1000000)
       .toString().padStart(6, '0');
 
-    // Your student data object
+
     const studentData = {
       "Registration-ID": studentID,
       "1-School-Information": {
@@ -891,5 +889,6 @@ async function goToSuccess() {
 </body>
 
 </html>
+
 
 
