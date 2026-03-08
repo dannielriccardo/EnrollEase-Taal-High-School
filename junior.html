@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('TaalHighSchool.png') no-repeat center center fixed;
+  background: url('TaalHighSchool.png') NO-repeat center center fixed;
   background-size: cover;
   padding: 20px;
 }
@@ -29,10 +29,12 @@ select {
   margin:auto; 
   padding:20px;
   border:2px solid #000;
+  border-radius: 10px;
 }
 
 input, textarea {
   text-transform: uppercase;
+  border-radius: 5px;
 }
 
 h3 {
@@ -70,6 +72,7 @@ input, select {
   border:1px solid #000;
   padding:5px;
   height:30px;
+  border-radius: 5px;
 }
 
 
@@ -201,7 +204,7 @@ textarea.input-error,
 select.input-error {
   border: 2px solid #ff0000 !important;
   background-color: #ffe6e6 !important; 
-  outline: none !important; 
+  outline: NOne !important; 
 }
 .error-message {
   color: #ff0000 !important;
@@ -245,8 +248,8 @@ select.input-error {
     <label>With LRN</label>
     <select name="with-lrn">
       <option value="">Select</option>
-      <option>Yes</option>
-      <option>No</option>
+      <option>YES</option>
+      <option>NO</option>
     </select>
   </div>
 
@@ -254,8 +257,8 @@ select.input-error {
     <label>Returning (Balik-Aral)/Transfer Student</label>
     <select name="balik-aral">
       <option value="">Select</option>
-      <option>Yes</option>
-      <option>No</option>
+      <option>YES</option>
+      <option>NO</option>
     </select>
   </div>
 </div>
@@ -263,7 +266,7 @@ select.input-error {
 <h3>LEARNER INFORMATION</h3>
 
 <div class="row">
-  <div class="field"><label>PSA No.</label><input type="text" name="psa" ></div>
+  <div class="field"><label>PSA NO.</label><input type="text" name="psa" ></div>
   <div class="field"><label>LRN</label><input type="text" name="lrn" maxlength="12" ></div>
 </div>
 
@@ -294,7 +297,7 @@ select.input-error {
 </div>
 <h3>CURRENT ADDRESS</h3>
 <div class="address-grid">
-  <div class="field"><label>House No.</label><input type="text" name="currenthouseNo"></div>
+  <div class="field"><label>House NO.</label><input type="text" name="currenthouseNO"></div>
   <div class="field wide"><label>Street</label><input type="text" name="currentstreet"></div>
   <div class="field"><label>Barangay</label><input type="text" name="currentbarangay"></div>
   <div class="field"><label>Municipality City</label><input type="text" name="currentmunicipalitycity"></div>
@@ -307,12 +310,12 @@ select.input-error {
   <label>Same As Your Current Address</label>
   <select name="sameaddress">
     <option value="">Select</option>
-    <option>Yes</option>
-    <option>No</option>
+    <option>YES</option>
+    <option>NO</option>
   </select>
 </div>
 <div class="address-grid">
-  <div class="field"><label>House No.</label><input type="text" name="permanenthouseNo"></div>
+  <div class="field"><label>House NO.</label><input type="text" name="permanenthouseNO"></div>
   <div class="field wide"><label>Street</label><input type="text" name="permanentstreet"></div>
   <div class="field"><label>Barangay</label><input type="text" name="permanentbarangay"></div>
   <div class="field"><label>Municipality City</label><input type="text" name="permanentcity"></div>
@@ -340,27 +343,27 @@ select.input-error {
 <h3>OPTIONAL INFORMATION</h3>
 
 <div class="section-box">
-  <label>Belonging to Indegenous People Community?</label>
+  <label>Belonging to IndegeNOus People Community?</label>
   <select name="ip">
     <option value="">Select</option>
-    <option>Yes</option>
-    <option>No</option>
+    <option>YES</option>
+    <option>NO</option>
   </select>
   <br><br>
-  <input type="text" placeholder="If yes, specify" name="culture">
+  <input type="text" placeholder="If YES, specify" name="culture">
 </div>
 
 <div class="section-box">
   <label>Learner with Disability?</label>
   <select name="disability">
     <option value="">Select</option>
-    <option>Yes</option>
-    <option>No</option>
+    <option>YES</option>
+    <option>NO</option>
   </select>
   <br><br>
   <label>Disability Type</label>
   <select name="disType">
-    <option value="">If yes, Select your Disabilities</option>
+    <option value="">If YES, Select your Disabilities</option>
     <option>Visual Impairment (Blind)</option>
     <option>Visual Impairment (Low Vision Disorder)</option>
     <option>Hearing Impairment</option>
@@ -379,8 +382,8 @@ select.input-error {
   <label>Are you a 4P's Community?</label>
   <select name="4Ps">
     <option value="">Select</option>
-    <option>Yes</option>
-    <option>No</option>
+    <option>YES</option>
+    <option>NO</option>
   </select>
   <br><br>
   <input type="text" placeholder="4P's Household ID" name="HouseID">
@@ -458,13 +461,13 @@ function copyPermanentAddress() {
   const sameSelect = document.querySelector('[name="sameaddress"]');
   sameSelect.addEventListener("change", () => {
     const fields = {
-      currentHouse: document.querySelector('[name="currenthouseNo"]'),
+      currentHouse: document.querySelector('[name="currenthouseNO"]'),
       currentStreet: document.querySelector('[name="currentstreet"]'),
       currentBarangay: document.querySelector('[name="currentbarangay"]'),
       currentCity: document.querySelector('[name="currentmunicipalitycity"]'),
       currentProvince: document.querySelector('[name="currentprovince"]'),
       currentZip: document.querySelector('[name="currentzipCode"]'),
-      permHouse: document.querySelector('[name="permanenthouseNo"]'),
+      permHouse: document.querySelector('[name="permanenthouseNO"]'),
       permStreet: document.querySelector('[name="permanentstreet"]'),
       permBarangay: document.querySelector('[name="permanentbarangay"]'),
       permCity: document.querySelector('[name="permanentcity"]'),
@@ -472,7 +475,7 @@ function copyPermanentAddress() {
       permZip: document.querySelector('[name="permanentzipCode"]')
     };
 
-    if (sameSelect.value === "Yes") {
+    if (sameSelect.value === "YES") {
       fields.permHouse.value = fields.currentHouse.value;
       fields.permStreet.value = fields.currentStreet.value;
       fields.permBarangay.value = fields.currentBarangay.value;
@@ -511,14 +514,14 @@ function controlOptionalFields(){
   const fourPs = document.querySelector('[name="4Ps"]');
   const houseID = document.querySelector('[name="HouseID"]');
 
-  if(withlrn.value === "No"){
+  if(withlrn.value === "NO"){
     lrn.value="";
     lrn.disabled=true;
   }else{
     lrn.disabled=false;
   }
 
-  if(balik.value === "No"){
+  if(balik.value === "NO"){
     lastGrade.value="";
     lastSchool.value="";
     lastYear.value="";
@@ -535,21 +538,21 @@ function controlOptionalFields(){
     schoolID.disabled=false;
   }
 
-  if(ip.value === "No"){
+  if(ip.value === "NO"){
     culture.value="";
     culture.disabled=true;
   }else{
     culture.disabled=false;
   }
 
-  if(disability.value === "No"){
+  if(disability.value === "NO"){
     disType.value="";
     disType.disabled=true;
   }else{
     disType.disabled=false;
   }
 
-  if(fourPs.value === "No"){
+  if(fourPs.value === "NO"){
     houseID.value="";
     houseID.disabled=true;
   }else{
@@ -586,14 +589,14 @@ async function goToSuccess() {
       placeOfBirth: document.querySelector('[name="placeOfBirth"]'),
       religion: document.querySelector('[name="religions"]'),
       motherTongue: document.querySelector('[name="motherTongue"]'),
-      currentHouse: document.querySelector('[name="currenthouseNo"]'),
+      currentHouse: document.querySelector('[name="currenthouseNO"]'),
       currentStreet: document.querySelector('[name="currentstreet"]'),
       currentBarangay: document.querySelector('[name="currentbarangay"]'),
       currentCity: document.querySelector('[name="currentmunicipalitycity"]'),
       currentProvince: document.querySelector('[name="currentprovince"]'),
       currentZip: document.querySelector('[name="currentzipCode"]'),
       sameAddress: document.querySelector('[name="sameaddress"]'),
-      permHouse: document.querySelector('[name="permanenthouseNo"]'),
+      permHouse: document.querySelector('[name="permanenthouseNO"]'),
       permStreet: document.querySelector('[name="permanentstreet"]'),
       permBarangay: document.querySelector('[name="permanentbarangay"]'),
       permCity: document.querySelector('[name="permanentcity"]'),
@@ -631,7 +634,7 @@ async function goToSuccess() {
     }
 
 
-    if (fields.sameAddress.value === "Yes") {
+    if (fields.sameAddress.value === "YES") {
       fields.permHouse.value = fields.currentHouse.value;
       fields.permStreet.value = fields.currentStreet.value;
       fields.permBarangay.value = fields.currentBarangay.value;
@@ -646,13 +649,13 @@ async function goToSuccess() {
       { field: fields.gradeLevel, name: "Grade Level" },
       { field: fields.withlrn, name: "With LRN" },
       { field: fields.balikAral, name: "Balik-Aral" },
-      { field: fields.psa, name: "PSA No." },
+      { field: fields.psa, name: "PSA NO." },
       { field: fields.lastName, name: "Last Name" },
       { field: fields.firstName, name: "First Name" },
       { field: fields.birthdate, name: "Birthdate" },
 { field: fields.religion, name: "Religion" },
       { field: fields.sex, name: "Sex" },
-      { field: fields.currentHouse, name: "Current House No." },
+      { field: fields.currentHouse, name: "Current House NO." },
       { field: fields.currentStreet, name: "Current Street" },
       { field: fields.currentBarangay, name: "Current Barangay" },
       { field: fields.currentCity, name: "Current City" },
@@ -664,19 +667,19 @@ async function goToSuccess() {
       { field: fields.motherContact, name: "Mother's Contact Number" },
       { field: fields.guardianName, name: "Guardian Name" },
       { field: fields.guardianContact, name: "Guardian Contact Number" },
-      { field: fields.ip, name: "Indegenous People" },
+      { field: fields.ip, name: "IndegeNOus People" },
       { field: fields.disability, name: "Disability" },
       { field: fields.fourPs, name: "4P's Community" },
     ];
 
-    if (fields.withlrn.value === "Yes") {
+    if (fields.withlrn.value === "YES") {
       requiredFields.push({
         field: fields.lrn,
         name: "Learner Reference Number (LRN)"
       });
     }
 
-    if (fields.balikAral.value === "Yes") {
+    if (fields.balikAral.value === "YES") {
       requiredFields.push(
         { field: fields.lastGrade, name: "Last Grade Level Attended" },
         { field: fields.lastSchool, name: "Last School Attended" },
@@ -686,7 +689,7 @@ async function goToSuccess() {
       
     }
 
-    if (fields.sameAddress.value === "No") {
+    if (fields.sameAddress.value === "NO") {
       ["House", "Street", "Barangay", "City", "Province", "Zip"].forEach(key => {
         requiredFields.push({
           field: fields["perm" + key],
@@ -695,21 +698,21 @@ async function goToSuccess() {
       });
     }
 
-    if (fields.ip.value === "Yes") {
+    if (fields.ip.value === "YES") {
       requiredFields.push({
         field: fields.culture,
-        name: "Indigenous People Community"
+        name: "IndigeNOus People Community"
       });
     }
 
-    if (fields.disability.value === "Yes") {
+    if (fields.disability.value === "YES") {
       requiredFields.push({
         field: fields.disType,
         name: "Disability Type"
       });
     }
 
-    if (fields.fourPs.value === "Yes") {
+    if (fields.fourPs.value === "YES") {
       requiredFields.push({
         field: fields.houseID,
         name: "4P's Household ID"
@@ -838,15 +841,5 @@ async function goToSuccess() {
   }
 }
 </script>
-
-
-
-
 </body>
-
 </html>
-
-
-
-
-
